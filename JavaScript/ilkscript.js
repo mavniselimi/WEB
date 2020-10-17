@@ -1,0 +1,1 @@
+alert("Murat haddini bil");

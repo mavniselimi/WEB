@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           background-color: violet; 
+        }
+    </style>
+    <script type="text/javascript">
+        var saniye = 0, dakika = 0, saat = 0;
+        function bak()
+        {
+          if(saniye < 59){
+              saniye = saniye + 1;
+              Math.floor(Math.random() * 220) + 1; // 1 ve 100 arasında sayı üretir.
+              document.body.style.backgroundColor = 'rgb(' + (Math.floor(Math.random() * 220) + 1) + ',' + (Math.floor(Math.random() * 220) + 1) + ',' + (Math.floor(Math.random() * 220) + 1) + ')';
+          }
+          else
+          {
+            saniye = 0; 
+            if(dakika < 59) dakika = dakika + 1;
+            else{dakika = 0; saat = saat + 1;}
+          }
+          $("#sure").html(saat + " : " + dakika + " : " + saniye);
+        }
+        $(document).ready(function(){
+          $("#sure").html("0 : 0 : 0");
+          setInterval(bak, 1000);
+        });
+      </script>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis hic error autem nobis dignissimos possimus aperiam et, ex quae maiores, consequatur, cupiditate itaque enim numquam optio ipsum necessitatibus quasi sunt adipisci. Odio enim perspiciatis maxime dignissimos facere. Neque minima accusamus, assumenda quam expedita ratione inventore nemo consequatur magnam libero nihil ipsa fugiat ex aut, enim voluptas vel nam laborum aliquam magni atque? Accusantium doloribus tenetur dolorem eaque. Sint assumenda, facere autem nihil eaque molestias, minima eligendi et qui modi incidunt quis accusamus, id vero accusantium totam? Velit temporibus nostrum suscipit, voluptatum ab vitae asperiores magnam praesentium voluptatibus eius rerum.
+    </p>
+    <audio controls="controls" src="SagopaKajmer24.mp3"></audio>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Tıkla Bana</button>
+    <button type="button" onclick="bak()">Tıkla</button>
+    <p id="demo"></p>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev</title>
+    <style>
+        body{
+            background-color: grey !important;
+        }
+        h2.iki{
+            background: blue; 
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        p.iki{
+            font-size: 18px;
+            font-family: Verdana;
+            color: blue;
+            background-color: tomato;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <h2>Çiçekler Dünyası</h2>
+    <p><strong>Çiçek bitkilerde üremeyi sağlayan organları taşıyan yapı.</strong> Bir çiçek, 4 kısımdan oluşur. Üreme organlarını dıştan sararak onları dış etkilerden korur. Doğrudan üremeye katılmadığı için 'verimsiz kısım' olarak da adlandırılır. Dikotil bitkilerde çiçek örtüsü 2 kısımdan oluşur: Çanak yapraklar ve taç yapraklar.</p>
+    <a href="https://www.google.com/search?q=g%C3%BCl&oq=g%C3%BCl&aqs=chrome.0.69i59j46l2j0j46l2j0.614j0j7&sourceid=chrome&ie=UTF-8"><img src="b_1kirmizikucuk.jpg" alt="Gül" width="200" height="400"></a>
+    <a href="https://www.google.com/search?safe=active&sxsrf=ALeKk01l18zfTqrLYWKO0Oqao21LL3DUzg%3A1601987347513&ei=E2N8X5niHqOxrgSSpaSgCw&q=yasemin&oq=yasemin&gs_lcp=CgZwc3ktYWIQAzIHCC4QJxCTAjIHCAAQsQMQQzIECAAQQzIFCC4QsQMyBQguELEDMgQIABBDMgUILhCxAzICCAAyBQguELEDMgIILjoECAAQRzoECCMQJzoICAAQsQMQgwE6BQgAELEDOggILhCxAxCDAToECC4QQ1DoqQFYm7MBYLi0AWgAcAN4AIABnQGIAbIHkgEDMC43mAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=psy-ab&ved=0ahUKEwjZt6H2-5_sAhWjmIsKHZISCbQQ4dUDCA0&uact=5"><img src="osevio-blog-yasemin-cicegi-bakimi-5.jpg" alt="Yasemin" width="200" height="400"></a>    
+    <a href="https://www.google.com/search?safe=active&sxsrf=ALeKk02LVW1IT01hmwZJ0PdCr-oseVcz_w%3A1601987371557&ei=K2N8X9DFIefhrgTC966wDw&q=papatya&oq=papatya&gs_lcp=CgZwc3ktYWIQAzIKCC4QsQMQQxCTAjICCAAyAggAMgIIADICCAAyBQgAELEDMgQILhBDMgUIABCxAzIECAAQQzIFCAAQsQM6BAgAEEc6BAgjECc6CAguELEDEIMBOggIABCxAxCDAToFCC4QsQM6BwguELEDEEM6BwgAELEDEENQy58CWNumAmDcqAJoAHACeACAAZwBiAGwB5IBAzAuN5gBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab&ved=0ahUKEwiQh92B_J_sAhXnsIsKHcK7C_YQ4dUDCA0&uact=5"><img src="cm224.jpg" alt="Papatya" width="200" height="400"></a>
+    <br><a href="https://www.meb.gov.tr/" target="_blank" class="btn btn-primary">Mebe Gider</a><br>
+    <h2 class="iki">Başlık</h2><a href=""></a>
+    <p class="iki" id="uc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, non.</p>
+    <button type="button" class="btn btn-danger" onclick='document.getElementById("uc").innerHTML="Allah Var"'>Click Me</button>
+    <input type="button" name="button" value="Tıkla" id="but1" class="btn btn-success">
+    <br>
+    <input placeholder="İlk kenarı giriniz" type="text" id="hipokenar1">
+    <input placeholder="İkinci kenarı giriniz" type="text" id="hipokenar2"> <br>
+    <button type="button" class="btn btn-light" id="hesaplahipo">Hipotenüs Hesapla</button>
+    <br>
+    <div id="hipotenusSonuc"></div>
+    <br>
+    <input placeholder="Sayıyı giriniz" type="text" id="BolenHesaplaText"><br>
+    <button type="button" class="btn btn-dark" id="BolenHesaplaButton">Tıkla</button>
+    <ul id="BolenSonuc"></ul><br>
+    <input type="text" placeholder="Sayıyı Giriniz" id="AsalBolenliHaleYazdırma">
+    <button type="button" class="btn btn-success" id="AsalBolenliHaleYazdırmaButton">Click Me!</button><br>
+    <div id="AsalBolenliHaleYazdırmaDivi"></div>
+    <script>
+        var btnButton=document.getElementById("but1");
+        btnButton.onclick=function(){
+            window.alert("selam");
+        }
+        function factorial(a,b)
+        {
+            var temp=1;
+            ++b;
+            for(;1<b;b--){
+                temp*=b;
+            }
+            a=temp;
+            return a;
+        }
+        function Hesapla()
+        {
+            var k1=Number(document.getElementById("hipokenar1").value);
+            var k2=Number(document.getElementById("hipokenar2").value);
+            var hipotenus=Math.sqrt((k1*k1)+(k2*k2));
+            document.getElementById("hipotenusSonuc").innerHTML="Hipotenus==>"+hipotenus;
+        }
+        function BolenHesapla()
+        {
+            var i,ib=Number(document.getElementById("BolenHesaplaText").value);
+            var a="",g=0;
+            for(i=0;i<(ib+1);i++){
+                if(ib%i==0){
+                    a+="<li>"+i+"</li>";
+                    g+=1;
+                }
+            }
+            if(g<3 && ib>1){
+                a+="<li>Bu Sayı asaldır</li>"
+            }
+            document.getElementById("BolenSonuc").innerHTML=a;
+        }
+        function AsalMi(a){
+            var i,t=true;
+            for(i=2;i<a;i++){
+                if(a%i==0){
+                    t=false;
+                }
+            }
+            return t;
+        }
+        function AsalBolenliHaleYazdırmaFonksiyonu()
+        {
+            var a,temp,i=Number(document.getElementById("AsalBolenliHaleYazdırma").value);
+            var o="";
+            for (a=2;(a<(i+1) && i>1);a++){
+                if(AsalMi(a)){
+                    temp=i;
+                    while(i%a==0){
+                        o+=a+"*";
+                        i=i/a;
+                    }
+                    i=temp;
+                }
+            }
+            document.getElementById("AsalBolenliHaleYazdırmaDivi").innerHTML=o;
+        }
+        var hsbbtn=document.getElementById("hesaplahipo");
+        var AsalBolenliHaleYazdırmaButton=document.getElementById("AsalBolenliHaleYazdırmaButton");
+        AsalBolenliHaleYazdırmaButton.onclick=AsalBolenliHaleYazdırmaFonksiyonu;
+        hsbbtn.onclick=Hesapla;
+        BolenHesaplaButton.onclick=BolenHesapla;
+    </script>
+</body>
+</html>
