@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="Start" >Start The Party!</button>
+    <div id="party"></div>
+    <script>
+        s="<ol><li>Elma</li><li>Armut<li>Kavun</li></li></ol><ol type='A'><li>Elma<li>Armut<li>Kavun</li></li></li></ol><ol type='I'><li>Elma<li>Armut<li>Kavun</li></li></li></ol><ol type='A' start='3'><li>Elma<li>Armut<li>Kavun</li></li></li></ol><ul type='circle'><li>elma</li></ul><ul><li type='disc'> kavun</li></ul><ul type='square'><li>karpuz</li></ul>"
+        var sr=document.getElementById("Start"),loop=true;
+        function Tikla(){
+            document.getElementById("party").innerHTML=s;
+            delete document.getElementById("Start");
+            sr.style.visibility="hidden";
+        }
+        sr.onclick=Tikla;
+    </script>
+</body>
+</html>
